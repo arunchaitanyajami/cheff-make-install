@@ -1,5 +1,5 @@
-# Cookbook Name:: make-install-cookbook
+# Cookbook Name:: download-make-install
 # Attributes:: default
 
-default[:makeinstallcookbook][:install_prefix] = '/usr/local'
-default[:makeinstallcookbook][:packages] = []
+default[:download_make_install][:install_prefix] = '/usr/local'
+default[:download_make_install][:packages] = []

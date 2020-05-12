@@ -9,7 +9,7 @@ EXT_TYPE_CMD = {
 }
 EXT_TYPES = EXT_TYPE_CMD.keys.collect{|k| [k.length, k]}.sort.reverse.collect{|n,k|k}
 
-define :makeinstallcookbook, :action => :build, :install_prefix => '/usr/local', :configure_options => nil, :target => nil do
+define :download_make_install, :action => :build, :install_prefix => '/usr/local', :configure_options => nil, :target => nil do
 
   def make_extract_command(path)
     lpath = path.downcase
@@ -35,8 +35,8 @@ define :makeinstallcookbook, :action => :build, :install_prefix => '/usr/local',
   archive_url = params[:name]
   archive_dir = Chef::Config[:file_cache_path]
   archive_file = File::basename(archive_url)
-  if node[:makeinstallcookbook][:archive_dir]
-    archive_url = "#{node[:makeinstallcookbook][:archive_dir]}/#{archive_file}"
+  if node[:download_make_install][:archive_dir]
+    archive_url = "#{node[:download_make_install][:archive_dir]}/#{archive_file}"
   end
 
   install_prefix = params[:install_prefix]
