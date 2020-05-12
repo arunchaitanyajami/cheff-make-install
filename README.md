@@ -14,14 +14,14 @@ Attributes
 
 #### download-make-install::default
 
-`node['download_make_install']['install_prefix']` - install path prefix: default is '/usr/local'
-`node['download_make_install']['packages']` - build target source definitions hash-array. hash include few keys. `url` is target source file location, required. `configure_options` value will pass-through to ./configure option, optional. `target` is expected installed file/directory after installation, optional. if `target` is omitted then try to download/install everytime.
+`node['change-node-version']['install_prefix']` - install path prefix: default is '/usr/local'
+`node['change-node-version']['packages']` - build target source definitions hash-array. hash include few keys. `url` is target source file location, required. `configure_options` value will pass-through to ./configure option, optional. `target` is expected installed file/directory after installation, optional. if `target` is omitted then try to download/install everytime.
 
 Usage
 -----
 #### download-make-install::default
 
-Include `download_make_install` in your node's `run_list` and set packages information:
+Include `change-node-version` in your node's `run_list` and set packages information:
 
 ```json
 {
@@ -53,17 +53,7 @@ Include `download_make_install` in your node's `run_list` and set packages infor
 }
 ```
 
-Contributing
-------------
-
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
 License and Authors
 -------------------
-Authors: Takayuki Shimizukawa
+Authors: Arun Chaitanya Jami
 License: Apache 2.0
