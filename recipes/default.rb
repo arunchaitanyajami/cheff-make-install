@@ -5,7 +5,7 @@
 
 include_recipe 'build-essential'  # for g++ compiler
 
-node.download_make_install.packages.each do |entry|
+node.make_install_cookbook.packages.each do |entry|
   if entry.is_a? String
     url = entry
     target = nil
@@ -16,8 +16,8 @@ node.download_make_install.packages.each do |entry|
     configure_options = entry[:configure_options]
   end
 
-  download_make_install url do
-    install_prefix node.download_make_install.install_prefix
+  make_install_cookbook url do
+    install_prefix node.make_install_cookbook.install_prefix
     configure_options configure_options
     target target
   end

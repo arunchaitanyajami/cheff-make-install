@@ -27,10 +27,10 @@ Include `download_make_install` in your node's `run_list` and set packages infor
 {
   "name":"my_node",
   "run_list": [
-    "recipe[download-make-install]"
+    "recipe[make-install-cookbook]"
   ],
   "override_attributes" : {
-    "download_make_install": {
+    "make_install_cookbook": {
       "install_prefix" : "/usr/local/",
       "packages": [
         {
