@@ -17,7 +17,7 @@ node['download_make_install']['packages'].each do |entry|
   end
 
   download_make_install url do
-    install_prefix node.download_make_install.install_prefix
+    install_prefix node['download_make_install']['install_prefix']
     configure_options configure_options
     target target
   end
