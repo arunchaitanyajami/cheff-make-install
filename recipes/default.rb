@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: download-make-install
+# Cookbook Name:: make-install-cookbook
 # Recipe:: default
 #
 
