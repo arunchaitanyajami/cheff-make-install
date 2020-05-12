@@ -5,7 +5,7 @@
 
 include_recipe 'build-essential'  # for g++ compiler
 
-node.download_make_install.packages.each do |entry|
+node['download_make_install']['packages'].each do |entry|
   if entry.is_a? String
     url = entry
     target = nil
