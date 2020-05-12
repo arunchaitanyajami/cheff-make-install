@@ -14,23 +14,23 @@ Attributes
 
 #### download-make-install::default
 
-`node['change-node-version']['install_prefix']` - install path prefix: default is '/usr/local'
-`node['change-node-version']['packages']` - build target source definitions hash-array. hash include few keys. `url` is target source file location, required. `configure_options` value will pass-through to ./configure option, optional. `target` is expected installed file/directory after installation, optional. if `target` is omitted then try to download/install everytime.
+`node['makeinstallcookbook']['install_prefix']` - install path prefix: default is '/usr/local'
+`node['makeinstallcookbook']['packages']` - build target source definitions hash-array. hash include few keys. `url` is target source file location, required. `configure_options` value will pass-through to ./configure option, optional. `target` is expected installed file/directory after installation, optional. if `target` is omitted then try to download/install everytime.
 
 Usage
 -----
 #### download-make-install::default
 
-Include `change-node-version` in your node's `run_list` and set packages information:
+Include `makeinstallcookbook` in your node's `run_list` and set packages information:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[make-install-cookbook]"
+    "recipe[makeinstallcookbook]"
   ],
   "override_attributes" : {
-    "make_install_cookbook": {
+    "makeinstallcookbook": {
       "install_prefix" : "/usr/local/",
       "packages": [
         {

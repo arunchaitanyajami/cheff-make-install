@@ -1,4 +1,4 @@
-name             'make-install-cookbook'
+name             'makeinstallcookbook'
 maintainer       "Arun Chaitanya Jami"
 maintainer_email "arunchaitanyajami@gmail.com"
 license          "Apache 2.0"
